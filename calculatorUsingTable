@@ -1,0 +1,98 @@
+<html>
+ <head>  
+  <style>
+   table, tr, td
+   {
+    border:1px solid black;
+    border-collapse:collapse;
+    text-align:center;
+    background-color:#000040;
+   }   
+   input
+   {
+    padding:5px;
+    border:0px;
+    outline:0px;
+    text-align:right;
+   }
+   button
+   {
+    width:40px;
+    height:30px;
+    padding:5px;
+    border:0px;
+    outline:0px;
+    background-color:#0000c6;
+    color:white;
+   }
+   button:hover
+   {
+    background-color:#0080ff;
+   }
+   #equalbtn
+   {
+    background-color:#ffcd20;
+   }
+   #equalbtn:hover
+   {
+    background-color:#e8b400;
+   }   
+  </style>
+  
+  <script>
+   
+   function backbtn()
+   {
+    var val=calc.box.value;
+    var newval=val.substr(0,val.length-1);
+    calc.box.value=newval;
+   }
+   
+  </script>
+  
+ </head>
+ <body>
+  
+  <form name="calc">
+  <table align="center">
+   <tr>
+    <td colspan="4">
+     <input type="text" name="box" readonly />
+    </td>
+   </tr>
+   <tr>
+    <td> <button type="button" onclick="backbtn()" >&larr;</button> </td>
+    <td> <button type="button" onclick="calc.box.value=''" >C</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='%'" >%</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='/'" >/</button> </td>
+   </tr>
+   <tr>
+    <td> <button type="button" onclick="calc.box.value+='7'" >7</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='8'" >8</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='9'" >9</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='*'" >*</button> </td>
+   </tr>
+   <tr>
+    <td> <button type="button" onclick="calc.box.value+='4'" >4</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='5'" >5</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='6'" >6</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='-'" >-</button> </td>
+   </tr>
+   <tr>
+    <td> <button type="button" onclick="calc.box.value+='1'" >1</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='2'" >2</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='3'" >3</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='+'" >+</button> </td>
+   </tr>
+   <tr>
+    <td> <button type="button" onclick="calc.box.value+='0'" >0</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='.'" >.</button> </td>
+    <td> <button type="button" onclick="calc.box.value+='00'" >00</button> </td>
+    <td> <button type="button" onclick="calc.box.value=eval(calc.box.value) " id="equalbtn" >=</button> </td>
+   </tr>   
+  </table>
+  </form>
+  
+  
+ </body>
+</html>
